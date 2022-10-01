@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3">  -->
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Artsy Gallery</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="img-container">
+         <div id="gallery" class="gallery">
+            <img onclick="changeModalImage('images1')" src="./assets/images/images1.jpg"/>
+            <img onclick="changeModalImage('images2')"  src="./assets/images/images2.jpg"/>
+            <img onclick="changeModalImage('images3')"  src="./assets/images/images3.jpg"/>
+            <img onclick="changeModalImage('images4')"  src="./assets/images/images4.jpg"/>
+            <img onclick="changeModalImage('images5')"  src="./assets/images/images5.jpg"/>
+            <img onclick="changeModalImage('images6')"  src="./assets/images/images6.jpg"/>
+            <img onclick="changeModalImage('images7')"  src="./assets/images/images7.jpg"/>
+            <img onclick="changeModalImage('images8')"  src="./assets/images/images8.jpg"/>
+            <img onclick="changeModalImage('images9')"  src="./assets/images/images9.jpg"/>
+            <img onclick="changeModalImage('images10')"  src="./assets/images/images10.jpg"/>
+            <img onclick="changeModalImage('images11')"  src="./assets/images/images11.jpg"/>
+            <img onclick="changeModalImage('images12')"  src="./assets/images/images12.jpg"/>
+            <img onclick="changeModalImage('images13')"  src="./assets/images/images13.jpg"/>
+            <img onclick="changeModalImage('images14')"  src="./assets/images/images14.jpg"/>
+            <img onclick="changeModalImage('images15')"  src="./assets/images/images15.jpg"/>
+            <img onclick="changeModalImage('images16')"  src="./assets/images/images16.jpg"/>
+            <img onclick="changeModalImage('images17')"  src="./assets/images/images17.jpg"/>
+            <img onclick="changeModalImage('images18')"  src="./assets/images/images18.jpg"/>
+            <img onclick="changeModalImage('images19')"  src="./assets/images/images19.jpg"/>
+            <img onclick="changeModalImage('images20')"  src="./assets/images/images20.jpg"/>
+            <img onclick="changeModalImage('images21')"  src="./assets/images/images21.jpg"/>
+            <img onclick="changeModalImage('images22')"  src="./assets/images/images22.jpg"/>
+            <img onclick="changeModalImage('images23')"  src="./assets/images/images23.jpg"/>
+        </div>
+   
+        <div id="modal" class="modal">
+            <div class="img-gallery">
+                <button onclick="closeModal()" class="close-btn">X</button>
+                <img id="modalImg" src="./assets/images/images9i.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+   
+    <script>
+        let modal = document.getElementById("modal")
+
+        function changeModalImage(img) {
+            console.log(img)
+            let modalImg=document.getElementById("modalImg").src ="./assets/images/"+img+"i.jpg"
+            modal.style.display="flex"
+            
+            console.log(modalImg)
+
+        }
+
+        function closeModal () {
+            modal.style.display="none"
+            console.log("Modal Closed")
+        }
+
+
+    </script>
+</body>
+</html>
